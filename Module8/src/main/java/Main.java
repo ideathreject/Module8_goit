@@ -5,10 +5,21 @@ public class Main {
         Shape triangle = new Triangle();
         Shape rectangle = new Rectangle();
         Shape parallelepiped = new Parallelepiped();
-        System.out.println(circle.getName());
-        System.out.println(quad.getName());
-        System.out.println(triangle.getName());
-        System.out.println(rectangle.getName());
-        System.out.println(parallelepiped.getName());
+        ShapePrinter shapePrinter = new ShapePrinter();
+
+       // System.out.println(circle.getName());
+
+        shapePrinter.printShapeName(circle);
+        shapePrinter.printShapeName(quad);
+        shapePrinter.printShapeName(triangle);
+        shapePrinter.printShapeName(rectangle);
+        shapePrinter.printShapeName(parallelepiped);
+
+    }
+}
+class ShapePrinter{
+    public void printShapeName(Shape shape){
+
+        System.out.println(shape.getName());
     }
 }
